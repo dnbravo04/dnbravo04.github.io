@@ -5,24 +5,34 @@ body {
   color: #dcd7c9;
 }
 
-h1 {
-  text-align: center !important;
-}
-
-header {
+header,
+footer {
   margin: auto;
   padding: 2px;
-  width: 75%;
+  width: 90%;
   background-color: #3f4e4f;
   border-radius: 7px;
+  text-align: center;
+}
+footer {
+  margin-top: 0.75rem;
+  font-size: 1.5rem;
+}
+
+header > em {
+  margin-top: 0;
+  font-size: 1.5rem;
+}
+
+h1 {
+  margin-bottom: 0;
 }
 
 .main-card {
-
   margin: auto;
   margin-top: 1.5rem;
   padding: 2px;
-  width: 75%;
+  width: 90%;
   background-color: #3f4e4f;
   border-radius: 7px;
   display: flex;
@@ -32,26 +42,117 @@ header {
 .card {
   margin: 1rem;
   background-color: #a27b5c;
-  padding: 0.5rem;
   border-radius: 7px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  max-width: 50%;
+  max-width: 49%;
   flex-grow: 1;
 }
 
 .card > h2 {
   text-align: center;
 }
-.card.card1{
-    text-align: justify;
-}
-img{
-    max-width: 100%;
-    height: auto;
+
+.card.card1 {
+  text-align: justify;
+  padding: 1.5rem;
 }
 
-@media (max-width: 1614px){
-    .card{
-        max-width: 100%;
-    }
+div.images {
+  padding: 0.5rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 7px;
+}
+
+.card.card6 {
+  max-width: 100%;
+  text-align: justify;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+}
+
+iframe {
+  display: block;
+  margin: auto;
+  padding: 0.5rem;
+}
+
+code > pre {
+  padding-left: 0.25rem;
+  font-size: 1rem;
+  max-width: 100%;
+}
+
+pre {
+  overflow-x: auto;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
+}
+
+input:invalid {
+  border: solid red 3px;
+}
+form{
+  flex-wrap: wrap;
+}
+label{
+  width: 190px;
+  font-size: 1.5rem;
+  display: inline-block;
+  padding-left: 0.5rem;
+}
+
+.form .numero{
+  border-radius: 7px;
+  padding: 7px;
+  width: 65%;
+  font-size: 1rem;
+  margin: 0.5rem;
+}
+button{
+  padding: 7px;
+  margin: auto;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 1614px) {
+  .card {
+    max-width: 100%;
+  }
+}
+
+
+@media (max-width: 782px) {
+  header,
+  footer,
+  .main-card {
+    width: auto;
+  }
+
+  .main-card {
+    border-radius: 0;
+  }
+
+  .card {
+    margin: 1rem 0 1rem 0;
+    border-radius: 0;
+  }
+
+  pre {
+    overflow-x: scroll;
+  }
 }

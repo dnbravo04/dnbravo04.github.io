@@ -2,61 +2,225 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="styles/styles.css">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/themes/prism.min.css" />
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="styles/styles.css" />
     <title>Explicación JS</title>
 </head>
 
 <body>
     <header>
         <h1>Desarrollo de un algorito sencillo en el lenguaje JS</h1>
+        <em>Por Diego Bravo Arias</em>
     </header>
     <div class="main-card">
         <div class="card">
             <h2>Contenido</h2>
             <ul>
-                <li><a href="#enunciado">Enunciado del algoritmo a desarrollar</a></li>
+                <li>
+                    <a href="#enunciado">Enunciado del algoritmo a desarrollar</a>
+                </li>
                 <li><a href="#diagrama">Diagrama de flujo </a></li>
                 <li><a href="#pseudocodigo">Pseudocodigo</a></li>
-                <li><a href="#pasoPaso">Paso a paso</a></li>
+                <li><a href="#pasoPaso">Paso a paso (Video)</a></li>
                 <li><a href="#js">codigo en JS</a></li>
                 <li><a href="#Prueba">¡Pruebalo!</a></li>
             </ul>
         </div>
         <div class="card card1" id="enunciado">
             <h2>Enunciado del algoritmo a desarrollar</h2>
-            <p>Desarrollar un programa que permita almacenar las edades de un grupo de 10 personas en un vector de
-                enteros y luego determine la cantidad de personas que son menores de edad, mayores de edad, cuántos
-                adultos mayores, la edad más baja, la edad más alta y el promedio de edades ingresadas. Para el
-                ejercicio
-                anterior suponga que un adulto mayor debe tener una edad igual o superior a 60. Debe validar para cada
-                ingreso que los valores estén en un rango entre 1 y 120 años. En caso de error deberá notificar y
-                solicitar
-                un nuevo valor.</p>
+            <p>
+                Desarrollar un programa que permita almacenar las edades de un grupo
+                de 10 personas en un vector de enteros y luego determine la cantidad
+                de personas que son menores de edad, mayores de edad, cuántos adultos
+                mayores, la edad más baja, la edad más alta y el promedio de edades
+                ingresadas. Para el ejercicio anterior suponga que un adulto mayor
+                debe tener una edad igual o superior a 60. Debe validar para cada
+                ingreso que los valores estén en un rango entre 1 y 120 años. En caso
+                de error deberá notificar y solicitar un nuevo valor.
+            </p>
         </div>
         <div class="card card2" id="diagrama">
             <h2>Diagrama de flujo</h2>
             <div class="images">
-                <img src="/assets/organizadorEdades.png" alt="" srcset="">
+                <img src="assets/organizadorEdades.png" alt="Diagrama de flujo del pseudocodigo" />
             </div>
         </div>
         <div class="card card3" id="pseudocodigo">
             <h2>Pseudocodigo</h2>
+            <code>
+          <pre>
+Algoritmo organizadorEdades
+Dimension edades[10]
+Definir adultoJoven,adultoMenor,menorDeEdad Como Entero
+Para i&lt;-1 Hasta 10 Hacer
+    Escribir 'Ingrese la ',i,' edad'
+    Leer edad
+    Si edad&gt;120 O edad&lt;=0 Entonces
+        Escribir 'El dato ',edad,' no es valido'
+        i &lt;- i-1
+    SiNo
+        Si edad&gt;=60 Entonces
+            adultoJoven &lt;- adultoJoven+1
+            edades[i] &lt;- edad
+        FinSi
+        Si edad&gt;=18 Y edad&lt;=60 Entonces
+            adultoMenor &lt;- adultoMenor+1
+            edades[i] &lt;- edad
+        FinSi
+        Si edad&gt;0 Y edad&lt;=17 Entonces
+            menorDeEdad &lt;- menorDeEdad+1
+            edades[i] &lt;- edad
+        FinSi
+    FinSi
+FinPara
+edadMayor &lt;- edades[1]
+edadMenor &lt;- edades[1]
+Para i&lt;-1 Hasta 10 Hacer
+    Si edades[i]&gt;edadMayor Entonces
+        edadMayor &lt;- edades[i]
+    FinSi
+    Si edades[i]&lt;=edadMenor Entonces
+        edadMenor &lt;- edades[i]
+    FinSi
+FinPara
+promedio &lt;- (edades[1]+edades[2]+edades[3]+edades[4]+edades[5]+
+edades[6]+edades[7]+edades[8]+edades[9]+edades[10])/10
+Escribir 'Las edades del arreglo son: ',edades[1],', ',edades[2],', '
+,edades[3],', ',edades[4],', ',edades[5],', ',edades[6],', ',edades[7],', '
+,edades[8],', ',edades[9],', ',edades[10],'.'
+Escribir 'La edad m�s alta del arreglo es de ',edadMayor,' a&ntilde;os'
+Escribir 'La edad m�s baja del arreglo es de ',edadMenor,' a&ntilde;os'
+Escribir 'El promedio de edades es de ',promedio,' a&ntilde;os'
+Escribir 'el total de adultos mayores es de ',adultoJoven
+Escribir 'el total de mayores de edad es de ',adultoMenor
+Escribir 'el total de menores de edad es de ',menorDeEdad
+Finlgoritmo
+        </pre
+          >
+        </code>
         </div>
         <div class="card card4" id="pasoPaso">
-            <h2>Paso a paso</h2>
-        </div>
-        <div class="card card5" id="js">
-            <h2>codigo en JS</h2>
+            <h2>Paso a paso en video</h2>
+            <div class="container">
+                <iframe width="640" height="360" src="https://www.youtube.com/embed/t1O7LpOTBfM"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
         </div>
         <div class="card card5" id="Prueba">
             <h2>¡Pruebalo!</h2>
+            <div class="form" id="algoritmo">
+                <form id="formularioNumeros">
+                    <label for="numero1">Primer numero:</label>
+                    <input type="number" name="n1" id="n1" min="1" max="120" class="numero"
+                        placeholder="Ingresa el numero aquí..." required /><br>
+                    <label for="numero2">Segundo numero:</label>
+                    <input type="number" name="n2" id="n2" min="1" max="120" class="numero"
+                        placeholder="Ingresa el numero aquí..." required /><br>
+                    <label for="numero3">Tercer numero:</label>
+                    <input type="number" name="n3" id="n3" min="1" max="120" class="numero"
+                        placeholder="Ingresa el numero aquí..." required /><br>
+                    <label for="numero4">Cuarto numero:</label>
+                    <input type="number" name="n4" id="n4" min="1" max="120" class="numero"
+                        placeholder="Ingresa el numero aquí..." required /><br>
+                    <label for="numero5">Quinto numero:</label>
+                    <input type="number" name="n5" id="n5" min="1" max="120" class="numero"
+                        placeholder="Ingresa el numero aquí..." required /><br>
+                    <label for="numero6">Sexto numero:</label>
+                    <input type="number" name="n6" id="n6" min="1" max="120" class="numero"
+                        placeholder="Ingresa el numero aquí..." required /><br>
+                    <label for="numero7">Septimo numero:</label>
+                    <input type="number" name="n7" id="n7" min="1" max="120" class="numero"
+                        placeholder="Ingresa el numero aquí..." required /><br>
+                    <label for="numero8">Octavo numero:</label>
+                    <input type="number" name="n8" id="n8" min="1" max="120" class="numero"
+                        placeholder="Ingresa el numero aquí..." required /><br>
+                    <label for="numero9">Noveno numero:</label>
+                    <input type="number" name="n9" id="n9" min="1" max="120" class="numero"
+                        placeholder="Ingresa el numero aquí..." required /><br>
+                    <label for="numero10">Decimo numero:</label>
+                    <input type="number" name="n10" id="n10" min="1" max="120" class="numero"
+                        placeholder="Ingresa el numero aquí..." required /><br>
+                    <button id="submit" form="formularioNumeros" [disabled]="!formularioNumeros.valid">
+                        Empezar algoritmo
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div class="card card6" id="js">
+            <h2>codigo en JS</h2>
+            <code>
+          <pre>
+//Funci&oacute;n que, al hacer click en el bot&oacute;n Empezar algoritmo, llama a la funci&oacute;n algoritmo numeros
+document.getElementById(&quot;submit&quot;).addEventListener(&quot;click&quot;, function(element){
+    algoritmoNumeros();
+    element.preventDefault();
+    
+});
+/**
+ * Funci&oacute;n que me permite agregar los numeros a un arreglo y clasificarlos
+ * de acuerdo a los requerimientos.
+ */
+function algoritmoNumeros(){
+    let arregloNumeros = []
+    let adultoMayor = 0;
+    let mayorDeEdad = 0;
+    let menorDeEdad = 0;
+    
+    let numeros = document.getElementsByClassName(&quot;numero&quot;);
+    
+    for (let i=0; i&lt;numeros.length; i++){
+        let numero = parseInt(numeros[i].value);
+        if (numero &gt;= 60){
+            adultoMayor += 1;
+            arregloNumeros.push(numero);
+        }
+        else if (numero &gt;= 18 &amp;&amp; numero &lt; 60){
+            mayorDeEdad += 1;
+            arregloNumeros.push(numero);
+        }
+        else if (numero &gt; 0 &amp;&amp; numero &lt;=17){
+            menorDeEdad += 1
+            arregloNumeros.push(numero)
+        }
+    }
+    let mayor = Math.max(...arregloNumeros);
+    let menor = Math.min(...arregloNumeros);
+    let promedio = arregloNumeros.reduce((a,b) =&gt; a + b,0)/arregloNumeros.length;
+    document.getElementById('algoritmo').innerHTML = `
+    &lt;p&gt;Las edades del arreglo son las siguientes: ${arregloNumeros.sort()}&lt;/p&gt; &lt;br&gt;
+    &lt;p&gt;la edad m&aacute;s alta en el arreglo es de ${mayor} a&ntilde;os &lt;/p&gt;&lt;br&gt;
+    &lt;p&gt;la edad m&aacute;s baja en el arreglo es de ${menor} a&ntilde;os&lt;/p&gt;&lt;br&gt;
+    &lt;p&gt;el promedio de edad es de ${promedio} a&ntilde;os&lt;/p&gt;&lt;br&gt;
+    &lt;p&gt;el total de adultos mayores es de ${adultoMayor}&lt;/p&gt;&lt;br&gt;
+    &lt;p&gt;el total de mayores de edad es de ${mayorDeEdad}&lt;/p&gt;&lt;br&gt;
+    &lt;p&gt;el total de menores de edad es de ${menorDeEdad}&lt;/p&gt;&lt;br&gt;
+    &lt;button onclick=&quot;regresar()&quot;&gt;volver a la forma&lt;/button&gt;
+    `;
+}
+
+/**
+ * Funci&oacute;n que elimina los resultados y vuelve a colocar el formulario
+ */
+function regresar(){
+    document.getElementById(&quot;algoritmo&quot;).innerHTML=`
+    &lt;form id=&quot;formularioNumeros&quot;&gt;`;
+}
+</pre>
+        </code>
         </div>
     </div>
+
     <script src="scripts/index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
+    <footer>
+        <em>Analisis y desarrollo de software</em> - Centro de Formación <em>La angostura</em>
+    </footer>
 </body>
 
 </html>
