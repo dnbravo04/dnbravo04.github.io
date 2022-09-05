@@ -103,13 +103,14 @@ pre {
   word-wrap: break-word;
 }
 
-input{
+input[type=number]{
   border: 0;
-  background-color: #26dd72;
+  background-color: #39694d;
+  color:#dcd7c9;
 }
 
-input:invalid {
-  background-color: #ca3737;
+input:invalid[type=number] {
+  background-color: #5a2020;
   color:#dcd7c9;
   
 }
@@ -141,6 +142,7 @@ label{
 button{
   padding: 7px;
   margin: auto;
+  margin-top: 15px ;
   margin-bottom: 15px;
   display: flex;
   justify-content: center;
@@ -150,6 +152,30 @@ button{
   color: #dcd7c9;
   font-size: 1.5rem;
   border: 0;
+}
+
+button:disabled{
+  padding: 7px;
+  margin: auto;
+  margin-top: 15px ;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 7px;
+  background-color: #1b1c1d;
+  color: #dcd7c9;
+  font-size: 1.5rem;
+  border: 0;
+}
+
+.resultado{
+  text-align: center;
+  text-decoration: double;
+  color: #2c3639;
+  padding: 0;
+  margin: 0;
+  font-size: 1.5rem;
 }
 
 @media (max-width: 1614px) {

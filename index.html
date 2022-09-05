@@ -5,7 +5,6 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/themes/prism.min.css" />
     <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="styles/styles.css" />
     <title>Explicación JS</title>
@@ -46,7 +45,7 @@
         <div class="card card2" id="pasoPaso">
             <h2>Paso a paso en video</h2>
             <div class="container">
-                <iframe width="640" height="360" src="https://www.youtube.com/embed/t1O7LpOTBfM"
+                <iframe width="640" height="360" src="https://www.youtube.com/embed/YqjVCk9Yj8w"
                     title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen></iframe>
@@ -55,40 +54,38 @@
         <div class="card card3" id="Prueba">
             <h2>¡Pruebalo!</h2>
             <div class="form" id="algoritmo">
-                <form id="formularioNumeros">
+                <form id="formularioNumeros" method="post">
                     <label for="numero1">Primer numero:</label>
                     <input type="number" name="n1" id="n1" min="1" max="120" class="numero"
-                        placeholder="Ingresa el numero aquí..." required value="9"/><br>
+                        placeholder="Ingresa el numero aquí..." required /><br>
                     <label for="numero2">Segundo numero:</label>
                     <input type="number" name="n2" id="n2" min="1" max="120" class="numero"
-                        placeholder="Ingresa el numero aquí..." required value="17"/><br>
+                        placeholder="Ingresa el numero aquí..." required /><br>
                     <label for="numero3">Tercer numero:</label>
                     <input type="number" name="n3" id="n3" min="1" max="120" class="numero"
-                        placeholder="Ingresa el numero aquí..." required value="23"/><br>
+                        placeholder="Ingresa el numero aquí..." required /><br>
                     <label for="numero4">Cuarto numero:</label>
                     <input type="number" name="n4" id="n4" min="1" max="120" class="numero"
-                        placeholder="Ingresa el numero aquí..." required value="36"/><br>
+                        placeholder="Ingresa el numero aquí..." required /><br>
                     <label for="numero5">Quinto numero:</label>
                     <input type="number" name="n5" id="n5" min="1" max="120" class="numero"
-                        placeholder="Ingresa el numero aquí..." required value="64"/><br>
+                        placeholder="Ingresa el numero aquí..." required /><br>
                     <label for="numero6">Sexto numero:</label>
                     <input type="number" name="n6" id="n6" min="1" max="120" class="numero"
-                        placeholder="Ingresa el numero aquí..." required value="5"/><br>
+                        placeholder="Ingresa el numero aquí..." required /><br>
                     <label for="numero7">Septimo numero:</label>
                     <input type="number" name="n7" id="n7" min="1" max="120" class="numero"
-                        placeholder="Ingresa el numero aquí..." required value="77"/><br>
+                        placeholder="Ingresa el numero aquí..." required /><br>
                     <label for="numero8">Octavo numero:</label>
                     <input type="number" name="n8" id="n8" min="1" max="120" class="numero"
-                        placeholder="Ingresa el numero aquí..." required value="120"/><br>
+                        placeholder="Ingresa el numero aquí..." required /><br>
                     <label for="numero9">Noveno numero:</label>
                     <input type="number" name="n9" id="n9" min="1" max="120" class="numero"
-                        placeholder="Ingresa el numero aquí..." required value="1"/><br>
+                        placeholder="Ingresa el numero aquí..." required /><br>
                     <label for="numero10">Decimo numero:</label>
                     <input type="number" name="n10" id="n10" min="1" max="120" class="numero"
-                        placeholder="Ingresa el numero aquí..." required value="33"/><br>
-                    <button id="submit" form="formularioNumeros" [disabled]="!formularioNumeros.valid">
-                        Empezar algoritmo
-                    </button>
+                        placeholder="Ingresa el numero aquí..." required /><br>
+                        <button id="submit" form="formularioNumeros" onclick="algoritmoNumeros()">Empezar Algoritmo</button>
                 </form>
             </div>
         </div>
@@ -152,7 +149,7 @@ Finlgoritmo
           >
         </code>
         </div>
-        
+
         <div class="card card6" id="js">
             <h2>codigo en JS</h2>
             <code>
@@ -218,7 +215,6 @@ function regresar(){
     </div>
 
     <script src="scripts/index.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
     <footer>
         <em>Analisis y desarrollo de software</em> - Centro de Formación <em>La angostura</em>
     </footer>
