@@ -22,7 +22,7 @@ Los diversos recursos de este proyecto son los siguientes:
 - [El video en YouTube](https://youtu.be/YqjVCk9Yj8w)
 - [Imagen del Diagrama de flujo](assets/organizadorEdades.png)
 - [Pseudocodigo](assets/organizadorEdades.psc)
-- [El documento del algoritmo en JavaScript](scripts\index.js)
+- [El documento del algoritmo en JavaScript](scripts/index.js)
 
 El proyecto se encuentra alojado en [este repositorio de GitHub](https://github.com/dnbravo04/dnbravo04.github.io) y una versión web se encuentra en [esta pagina web](https://dnbravo04.github.io/)
 
